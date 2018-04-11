@@ -1,0 +1,11 @@
+<?php
+$form=$this->form;
+$form->prepare();
+echo $this->form()->openTag($form);
+echo $msg;
+echo $this->formRow($form->get('nume'));
+echo "   ";
+echo $this->formSubmit($form->get('submit'));
+echo '<br/>';
+echo $this->form()->closeTag();
+

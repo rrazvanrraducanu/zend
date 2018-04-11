@@ -1,0 +1,9 @@
+<?php
+$url=$this->url('data',['action'=>'delete','id'=>$id]);
+?>
+<h1>Are you sure?</h1>
+<form action="<?php echo $url; ?>" method="post">
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
+    <input type="submit" name="del" value="Yes">
+    <input type="submit" name="del" value="No">
+</form>

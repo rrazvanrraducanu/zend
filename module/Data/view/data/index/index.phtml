@@ -1,0 +1,24 @@
+<table>
+    <tr>
+        <th style="width:100px">Nume</th>
+        <th style="width:100px">Culoare</th>
+        <th style="width:100px">Marime</th>
+        <th style="width:100px">Pret</th>
+        <th style="width:100px" colspan="3" align="center">Actions</th>
+    </tr>
+    <?php foreach($flower as $var){ ?>
+    <tr>
+        <td><?php echo $var->GetNume();?></td>
+        <td><?php echo $var->GetCuloare();?></td>
+        <td><?php echo $var->GetMarime();?></td>
+        <td><?php echo $var->GetPret();?></td>
+        <td>
+            <a href="<?php echo $this->url('data',['action'=>'view','id'=>$var->getId()]); ?>">View</a>
+            <a href="<?php echo $this->url('data',['action'=>'edit','id'=>$var->getId()]); ?>">Edit</a>
+            <a href="<?php echo $this->url('data',['action'=>'delete','id'=>$var->getId()]); ?>">Delete</a>
+        </td>
+    </tr>
+    <?php } ?>
+</table>
+<br/><br/>
+<a href="/add">Add another record</a>

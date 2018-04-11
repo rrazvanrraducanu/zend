@@ -1,0 +1,14 @@
+<?php
+$form->setAttribute('action',$this->url('data',['action'=>'add']));
+$form->prepare();
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('nume'));
+echo "<br/><br/>";
+echo $this->formRow($form->get('culoare'));
+echo "<br/><br/>";
+echo $this->formRow($form->get('marime'));
+echo "<br/><br/>";
+echo $this->formRow($form->get('pret'));
+echo "<br/><br/>";
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();

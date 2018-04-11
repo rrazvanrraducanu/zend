@@ -1,0 +1,39 @@
+<?php
+$title="Form controls";
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title);?></h1>
+<?php
+$form=$this->form;
+//$form->setAttribute('action',$this->url('my_form',['action'=>'show']));
+$form->prepare();
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('nume'));
+echo '<br/>';
+echo $this->formRow($form->get('prenume'));
+echo '<br/>';
+echo $this->formRow($form->get('password'));
+echo '<br/>';
+
+echo $this->formRow($form->get('textarea'));
+echo '<br/>';
+
+echo $this->formRow($form->get('radio'));
+echo '<br/>';
+
+echo $this->formRow($form->get('check1'));
+echo $this->formRow($form->get('check2'));
+echo $this->formRow($form->get('check3'));
+echo '<br/>';
+
+echo $this->formRow($form->get('dropdown'));
+echo '<br/>';
+
+echo $this->formRow($form->get('month'));
+echo '<br/>';
+
+echo $this->formSubmit($form->get('submit'));
+echo '<br/>';
+echo $this->form()->closeTag();
+?>
+

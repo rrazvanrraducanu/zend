@@ -1,0 +1,7 @@
+<?php
+$form->prepare();
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('nume1'));
+echo $this->formSubmit($form->get('submit'));
+echo $this->formRow($form->get('nume2')->setAttributes(['value'=>$msg]));
+echo $this->form()->closeTag();
